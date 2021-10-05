@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-rome-06-23-2021__patch1-hotfix1-09-15-2021_09-16-2021_1434.zip</compiler_build>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <internal_name>training_update_attendee_count</internal_name>
+        <label_cache>[{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.Table","label":"1➛Attendee Table","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.Records","label":"1➛Attendee Records","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.table_name","label":"2➛Course Table","reference":"x_snc_the_traini_0_course","reference_display":"Course","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.record","label":"2➛Course Record","reference":"x_snc_the_traini_0_course","reference_display":"Course","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.log","label":"2➛Log","reference_display":"Log","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"a2c86a2e-6a14-466e-84f8-38092775cd51"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"choice","uiUniqueId":"7f481405-329b-4729-9e31-2e32caeecbff"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"choice","uiUniqueId":"de724257-e1d2-4d67-8f9a-288a9b034117"}},{"name":"Created or Updated_1.current.course","label":"Trigger➛Attendee Record➛Course","reference":"x_snc_the_traini_0_course","reference_display":"Course","type":"reference","base_type":"reference","parent_table_name":"x_snc_the_traini_0_attendee","column_name":"course"},{"name":"Created or Updated_1.table_name","label":"Trigger➛Attendee Table","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.Table","label":"1➛Attendee Table","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.Record","label":"1➛Attendee Record","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>f2adb8c51b8f7c10d21e7774cc4bcbc9</master_snapshot>
+        <name>Training Update Attendee Count</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>83adf8c51b8f7c10d21e7774cc4bcb53</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:36:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b60cb4051b8f7c10d21e7774cc4bcb83</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Training Update Attendee Count</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name>sys_hub_flow_b60cb4051b8f7c10d21e7774cc4bcb83</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:41</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=b60cb4051b8f7c10d21e7774cc4bcb83"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b60cb4051b8f7c10d21e7774cc4bcb83"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_the_traini_0_attendee">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>83adf8c51b8f7c10d21e7774cc4bcb53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <table>x_snc_the_traini_0_attendee</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"4fadf8c51b8f7c10d21e7774cc4bcb53","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>b60cb4051b8f7c10d21e7774cc4bcb83</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:40</sys_created_on>
+        <sys_id>4fadf8c51b8f7c10d21e7774cc4bcb53</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <trigger display_value="">83adf8c51b8f7c10d21e7774cc4bcb53</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>4fadf8c51b8f7c10d21e7774cc4bcb53</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:40</sys_created_on>
+        <sys_id>4badf8c51b8f7c10d21e7774cc4bcb54</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=b60cb4051b8f7c10d21e7774cc4bcb83^sys_idNOT IN4fadf8c51b8f7c10d21e7774cc4bcb53"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=b60cb4051b8f7c10d21e7774cc4bcb83^sys_idNOT INe9ad78c51b8f7c10d21e7774cc4bcb74"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Training Update Attendee Count">b60cb4051b8f7c10d21e7774cc4bcb83</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>e9ad78c51b8f7c10d21e7774cc4bcb74</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e9ad78c51b8f7c10d21e7774cc4bcb74"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e9ad78c51b8f7c10d21e7774cc4bcb74</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>25ad78c51b8f7c10d21e7774cc4bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:33</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e9ad78c51b8f7c10d21e7774cc4bcb74</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>2dad78c51b8f7c10d21e7774cc4bcb75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:33</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e9ad78c51b8f7c10d21e7774cc4bcb74</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>e5ad78c51b8f7c10d21e7774cc4bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:33</sys_updated_on>
+        <value>x_snc_the_traini_0_attendee</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=e9ad78c51b8f7c10d21e7774cc4bcb74"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b60cb4051b8f7c10d21e7774cc4bcb83^sys_idNOT IN8f0cb4051b8f7c10d21e7774cc4bcb84"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b60cb4051b8f7c10d21e7774cc4bcb83</id>
+        <name>Training Update Attendee Count</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:36:33</sys_created_on>
+        <sys_id>8f0cb4051b8f7c10d21e7774cc4bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:36:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=b60cb4051b8f7c10d21e7774cc4bcb83^sys_idNOT IN1dad78c51b8f7c10d21e7774cc4bcb64,99ad78c51b8f7c10d21e7774cc4bcb6b,d9ad78c51b8f7c10d21e7774cc4bcb5c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD43adf8c5828f7c1027d21dc65b6e9e66,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Training Update Attendee Count">b60cb4051b8f7c10d21e7774cc4bcb83</model>
+        <model_id>b60cb4051b8f7c10d21e7774cc4bcb83</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b60cb4051b8f7c10d21e7774cc4bcb83</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>1dad78c51b8f7c10d21e7774cc4bcb64</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Update Attendee Count">b60cb4051b8f7c10d21e7774cc4bcb83</model>
+        <model_id>b60cb4051b8f7c10d21e7774cc4bcb83</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b60cb4051b8f7c10d21e7774cc4bcb83</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>99ad78c51b8f7c10d21e7774cc4bcb6b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Update Attendee Count">b60cb4051b8f7c10d21e7774cc4bcb83</model>
+        <model_id>b60cb4051b8f7c10d21e7774cc4bcb83</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b60cb4051b8f7c10d21e7774cc4bcb83</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>d9ad78c51b8f7c10d21e7774cc4bcb5c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=b60cb4051b8f7c10d21e7774cc4bcb83^sys_idNOT IN29ad78c51b8f7c10d21e7774cc4bcb7d,e5ad78c51b8f7c10d21e7774cc4bcbb6"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Training Update Attendee Count">b60cb4051b8f7c10d21e7774cc4bcb83</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>29ad78c51b8f7c10d21e7774cc4bcb7d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:44:45</sys_updated_on>
+        <ui_id>2ee8198d-1258-4bab-9b7b-56cf0ba15088</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=29ad78c51b8f7c10d21e7774cc4bcb7d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>29ad78c51b8f7c10d21e7774cc4bcb7d</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>25ad78c51b8f7c10d21e7774cc4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:34</sys_updated_on>
+        <value>x_snc_the_traini_0_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=29ad78c51b8f7c10d21e7774cc4bcb7d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>29ad78c51b8f7c10d21e7774cc4bcb7d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>e9ad78c51b8f7c10d21e7774cc4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>course={{Created or Updated_1.current.course}}^state=registered</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>29ad78c51b8f7c10d21e7774cc4bcb7d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>a1ad78c51b8f7c10d21e7774cc4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Training Update Attendee Count">b60cb4051b8f7c10d21e7774cc4bcb83</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>e5ad78c51b8f7c10d21e7774cc4bcbb6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:44:45</sys_updated_on>
+        <ui_id>f21b77d3-012b-40c7-9819-e14d60a7c352</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e5ad78c51b8f7c10d21e7774cc4bcbb6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e5ad78c51b8f7c10d21e7774cc4bcbb6</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>65ad78c51b8f7c10d21e7774cc4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:34</sys_updated_on>
+        <value>x_snc_the_traini_0_course</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e5ad78c51b8f7c10d21e7774cc4bcbb6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>e5ad78c51b8f7c10d21e7774cc4bcbb6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>21ad78c51b8f7c10d21e7774cc4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created or Updated_1.current.course}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e5ad78c51b8f7c10d21e7774cc4bcbb6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>6dad78c51b8f7c10d21e7774cc4bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>e5ad78c51b8f7c10d21e7774cc4bcbb6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:34</sys_created_on>
+        <sys_id>e1ad78c51b8f7c10d21e7774cc4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>attendee_count={{2ee8198d-1258-4bab-9b7b-56cf0ba15088.Count}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b60cb4051b8f7c10d21e7774cc4bcb83^sys_idNOT IN2dad78c51b8f7c10d21e7774cc4bcb70,55ad78c51b8f7c10d21e7774cc4bcb63,d1ad78c51b8f7c10d21e7774cc4bcb6a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b60cb4051b8f7c10d21e7774cc4bcb83</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>2dad78c51b8f7c10d21e7774cc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b60cb4051b8f7c10d21e7774cc4bcb83</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>55ad78c51b8f7c10d21e7774cc4bcb63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b60cb4051b8f7c10d21e7774cc4bcb83</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:33</sys_created_on>
+        <sys_id>d1ad78c51b8f7c10d21e7774cc4bcb6a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=b60cb4051b8f7c10d21e7774cc4bcb83^sys_idNOT INc3adf8c51b8f7c10d21e7774cc4bcb55"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"c3adf8c51b8f7c10d21e7774cc4bcb55","name":"plan","plan_signature":null}}</plan>
+        <plan_id>b60cb4051b8f7c10d21e7774cc4bcb83</plan_id>
+        <snapshot>3eed34091b8f7c10d21e7774cc4bcbda</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c3adf8c51b8f7c10d21e7774cc4bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <trigger display_value="">83adf8c51b8f7c10d21e7774cc4bcb53</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>training_update_attendee_count</internal_name>
+        <label_cache>[{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.Table","label":"1➛Attendee Table","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ee8198d-1258-4bab-9b7b-56cf0ba15088.Records","label":"1➛Attendee Records","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.table_name","label":"2➛Course Table","reference":"x_snc_the_traini_0_course","reference_display":"Course","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f21b77d3-012b-40c7-9819-e14d60a7c352.record","label":"2➛Course Record","reference":"x_snc_the_traini_0_course","reference_display":"Course","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.log","label":"2➛Log","reference_display":"Log","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"a2c86a2e-6a14-466e-84f8-38092775cd51"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"choice","uiUniqueId":"7f481405-329b-4729-9e31-2e32caeecbff"}},{"name":"b603ac30-00ff-474d-94db-7f0c7356059b.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"choice","uiUniqueId":"de724257-e1d2-4d67-8f9a-288a9b034117"}},{"name":"Created or Updated_1.current.course","label":"Trigger➛Attendee Record➛Course","reference":"x_snc_the_traini_0_course","reference_display":"Course","type":"reference","base_type":"reference","parent_table_name":"x_snc_the_traini_0_attendee","column_name":"course"},{"name":"Created or Updated_1.table_name","label":"Trigger➛Attendee Table","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.Table","label":"1➛Attendee Table","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"154eaad7-61eb-4999-a4ee-231b1254afd1.Record","label":"1➛Attendee Record","reference":"x_snc_the_traini_0_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Training Update Attendee Count</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Training Update Attendee Count">b60cb4051b8f7c10d21e7774cc4bcb83</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f2adb8c51b8f7c10d21e7774cc4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f2adb8c51b8f7c10d21e7774cc4bcbc9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f2adb8c51b8f7c10d21e7774cc4bcbc9"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=f2adb8c51b8f7c10d21e7774cc4bcbc9^sys_idNOT IN8badf8c51b8f7c10d21e7774cc4bcb2c"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Training Update Attendee Count">f2adb8c51b8f7c10d21e7774cc4bcbc9</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>8badf8c51b8f7c10d21e7774cc4bcb2c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:40</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8badf8c51b8f7c10d21e7774cc4bcb2c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8badf8c51b8f7c10d21e7774cc4bcb2c</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>07adf8c51b8f7c10d21e7774cc4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8badf8c51b8f7c10d21e7774cc4bcb2c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>8badf8c51b8f7c10d21e7774cc4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <value>x_snc_the_traini_0_attendee</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8badf8c51b8f7c10d21e7774cc4bcb2c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>c7adf8c51b8f7c10d21e7774cc4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=8badf8c51b8f7c10d21e7774cc4bcb2c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f2adb8c51b8f7c10d21e7774cc4bcbc9^sys_idNOT IN3aadb8c51b8f7c10d21e7774cc4bcbca"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f2adb8c51b8f7c10d21e7774cc4bcbc9</id>
+        <name>Training Update Attendee Count</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>3aadb8c51b8f7c10d21e7774cc4bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=f2adb8c51b8f7c10d21e7774cc4bcbc9^sys_idNOT IN32adb8c51b8f7c10d21e7774cc4bcbff,3eadb8c51b8f7c10d21e7774cc4bcbcd,76adb8c51b8f7c10d21e7774cc4bcbf3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Update Attendee Count">f2adb8c51b8f7c10d21e7774cc4bcbc9</model>
+        <model_id>f2adb8c51b8f7c10d21e7774cc4bcbc9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f2adb8c51b8f7c10d21e7774cc4bcbc9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>32adb8c51b8f7c10d21e7774cc4bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Update Attendee Count">f2adb8c51b8f7c10d21e7774cc4bcbc9</model>
+        <model_id>f2adb8c51b8f7c10d21e7774cc4bcbc9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f2adb8c51b8f7c10d21e7774cc4bcbc9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>3eadb8c51b8f7c10d21e7774cc4bcbcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD3aadb8c5788f7c101a45cc075114c3cb,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Training Update Attendee Count">f2adb8c51b8f7c10d21e7774cc4bcbc9</model>
+        <model_id>f2adb8c51b8f7c10d21e7774cc4bcbc9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f2adb8c51b8f7c10d21e7774cc4bcbc9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>76adb8c51b8f7c10d21e7774cc4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=f2adb8c51b8f7c10d21e7774cc4bcbc9^sys_idNOT IN4fadf8c51b8f7c10d21e7774cc4bcb2a,c7adf8c51b8f7c10d21e7774cc4bcb16"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Training Update Attendee Count">f2adb8c51b8f7c10d21e7774cc4bcbc9</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>4fadf8c51b8f7c10d21e7774cc4bcb2a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <ui_id>f21b77d3-012b-40c7-9819-e14d60a7c352</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4fadf8c51b8f7c10d21e7774cc4bcb2a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4fadf8c51b8f7c10d21e7774cc4bcb2a</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>87adf8c51b8f7c10d21e7774cc4bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <value>x_snc_the_traini_0_course</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4fadf8c51b8f7c10d21e7774cc4bcb2a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4fadf8c51b8f7c10d21e7774cc4bcb2a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>43adf8c51b8f7c10d21e7774cc4bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created or Updated_1.current.course}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>4fadf8c51b8f7c10d21e7774cc4bcb2a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>8fadf8c51b8f7c10d21e7774cc4bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>4fadf8c51b8f7c10d21e7774cc4bcb2a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>07adf8c51b8f7c10d21e7774cc4bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>attendee_count={{2ee8198d-1258-4bab-9b7b-56cf0ba15088.Count}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Training Update Attendee Count">f2adb8c51b8f7c10d21e7774cc4bcbc9</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>c7adf8c51b8f7c10d21e7774cc4bcb16</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <ui_id>2ee8198d-1258-4bab-9b7b-56cf0ba15088</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c7adf8c51b8f7c10d21e7774cc4bcb16"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c7adf8c51b8f7c10d21e7774cc4bcb16</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>43adf8c51b8f7c10d21e7774cc4bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <value>x_snc_the_traini_0_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c7adf8c51b8f7c10d21e7774cc4bcb16"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>c7adf8c51b8f7c10d21e7774cc4bcb16</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>0fadf8c51b8f7c10d21e7774cc4bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>course={{Created or Updated_1.current.course}}^state=registered</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>c7adf8c51b8f7c10d21e7774cc4bcb16</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>cfadf8c51b8f7c10d21e7774cc4bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_f2adb8c51b8f7c10d21e7774cc4bcbc9^sys_idNOT IN36adb8c51b8f7c10d21e7774cc4bcbef,b6adf8c51b8f7c10d21e7774cc4bcb06,feadb8c51b8f7c10d21e7774cc4bcbfa"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f2adb8c51b8f7c10d21e7774cc4bcbc9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>36adb8c51b8f7c10d21e7774cc4bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f2adb8c51b8f7c10d21e7774cc4bcbc9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>b6adf8c51b8f7c10d21e7774cc4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f2adb8c51b8f7c10d21e7774cc4bcbc9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:43:39</sys_created_on>
+        <sys_id>feadb8c51b8f7c10d21e7774cc4bcbfa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:43:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_flow action="update">
+        <sys_id>b60cb4051b8f7c10d21e7774cc4bcb83</sys_id>
+        <latest_snapshot>f2adb8c51b8f7c10d21e7774cc4bcbc9</latest_snapshot>
+    </sys_hub_flow>
+</record_update>

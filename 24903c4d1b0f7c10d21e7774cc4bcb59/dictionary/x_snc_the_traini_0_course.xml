@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Course" max_length="40" name="x_snc_the_traini_0_course" type="collection">
+        <element label="Attendee Count" max_length="40" name="attendee_count" read_only="true" type="integer"/>
+        <element label="Capacity" max_length="40" name="capacity" type="integer"/>
+        <element label="Min Threshhold" max_length="40" name="min_threshhold" type="integer"/>
+        <element display="true" label="Name" max_length="160" name="name" type="string"/>
+    </element>
+</database>
