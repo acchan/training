@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_alp_quick_action_map">
+    <sys_sg_alp_quick_action_map action="INSERT_OR_UPDATE">
+        <applet_launcher display_value="Training">467438451b4f7c10d21e7774cc4bcb88</applet_launcher>
+        <order>10</order>
+        <quick_action_button display_value="Create New">10b7f8c91b4f7c10d21e7774cc4bcbbf</quick_action_button>
+        <sys_class_name>sys_sg_alp_quick_action_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:17:32</sys_created_on>
+        <sys_id>98b7f8c91b4f7c10d21e7774cc4bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name>sys_sg_alp_quick_action_map_98b7f8c91b4f7c10d21e7774cc4bcbc2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:17:32</sys_updated_on>
+    </sys_sg_alp_quick_action_map>
+</record_update>

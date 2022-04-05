@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_config_element_attribute">
+    <sys_sg_view_config_element_attribute action="INSERT_OR_UPDATE">
+        <description/>
+        <name display_value="FieldLabel">c90fd1c2b7321010df65f6efce11a9d2</name>
+        <sys_class_name>sys_sg_view_config_element_attribute</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-05 09:03:28</sys_created_on>
+        <sys_id>927478451b4f7c10d21e7774cc4bcb4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c90fd1c2b7321010df65f6efce11a9d2</sys_name>
+        <sys_package display_value="The Training App" source="x_snc_the_traini_0">24903c4d1b0f7c10d21e7774cc4bcb59</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="The Training App">24903c4d1b0f7c10d21e7774cc4bcb59</sys_scope>
+        <sys_update_name>sys_sg_view_config_element_attribute_927478451b4f7c10d21e7774cc4bcb4b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-05 09:03:28</sys_updated_on>
+        <translated_value/>
+        <value>opened_by</value>
+        <view_config_element display_value="opened_by-FieldLabel">127478451b4f7c10d21e7774cc4bcb49</view_config_element>
+    </sys_sg_view_config_element_attribute>
+    <sys_translated_text action="delete_multiple" query="documentkey=927478451b4f7c10d21e7774cc4bcb4b"/>
+</record_update>
